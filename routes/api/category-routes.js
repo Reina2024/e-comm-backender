@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     });
     
     if (!categoryData) {
-      res.status(404).json({ message: 'Catgory Not Found' });
+      res.status(404).json({ message: 'Category Not Found' });
       return;
     }
 
