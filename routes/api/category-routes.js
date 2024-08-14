@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     });
     
     if (!categoryData) {
-      res.status(404).json({ message: 'No category found in the db' });
+      res.status(404).json({ message: 'Catgory Not Found' });
       return;
     }
 
@@ -20,11 +20,24 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET /api/categories/:id -show a category by id and products
+router.get('/:id', async (req, res) => {
+  try {
+    const categoryData = await Category.findByPk(req.params.id, {
+      include: [{ model: Product }]
+    });
 
-router.get('/:id', (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
+    if (!categoryData) {
+      res.status(404).json({ message: 'Category Not Found. Try a different ID' });
+      return;
+    }
+
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
 });
+
 
 router.post('/', (req, res) => {
   // create a new category
