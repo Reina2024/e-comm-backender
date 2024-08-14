@@ -65,7 +65,7 @@ Finally go to the root folder. Start the E-Comm Backender by `npm run start` in 
 Below is a video of the terminal usage. 
 
   [Watch this video walk through](
- https://)
+ https://app.screencastify.com/v3/watch/VlrUsfRNOxf4WvgQF4VU)
 
 ## Testing 
 
@@ -115,4 +115,4 @@ Thank you to Staff and TAs and students who helped me complete this project.
  - [Github Repository](https://github.com/Reina2024/e-comm-backender)
 
 Video Link
--https://
+- https://app.screencastify.com/v3/watch/VlrUsfRNOxf4WvgQF4VU
